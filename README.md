@@ -4,8 +4,6 @@ Static Application Security Testing(SAST) tools are used to scan code to identif
 - Pattern Matching 
 - Data Follow Analysis(Taint Analysis)
 - Control Flow Analysis
-- Reachability Analysis
-- Software Composition Analysis(SCA)
 
 
 ## SAST Techniques  
@@ -16,7 +14,6 @@ Pattern matching searches code for a set of predefined patterns associated with 
 Data Follow Analysis(Taint Analysis) is used to detect injection and insecure handling of data vulnerabilies. The flow of data(untrusted user input - tainted data) from entry point into the application(source) to where it's used(sink) is tracked to identify if the tainted data reaches a sink without proper sanitatization.  
 
 ### Control Flow Analysis  
+Control Flow Analysis create exectuion paths to identify race conditions and unhandled errors which can threaten the stability of the application.
 
-### Reachability Analysis  
-
-### Software Composition Analysis(SCA)  
+<!-- EOF -->
