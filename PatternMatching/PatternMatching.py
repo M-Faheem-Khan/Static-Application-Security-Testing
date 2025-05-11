@@ -77,12 +77,11 @@ class PatternMatching:
                     * CRYPTO: Weak Cryptographic 
             """
             VULNERABILITY_PATTERNS = PatternTypes(patternType).getPatterns(patternType)
-            for pattern in VULNERABILITY_PATTERNS:
-                print(pattern)
 
             if os.path.isfile(src):
                 self.scan_file(src, VULNERABILITY_PATTERNS)
-            else:
+            
+            if os.path.isdir(src):
                 for dir_path, _, file_names in os.walk(src):
                     for file_name in file_names:
                         file_path = os.path.join(dir_path, file_name)
